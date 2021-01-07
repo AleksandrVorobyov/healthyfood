@@ -1,0 +1,29 @@
+.header {
+    position: relative;
+    img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-color: #ffffff;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: -15px;
+        left: 0%;
+        width: 100%;
+        height: 80px;
+        background: url('../img/png/header-border-down.png') center no-repeat;
+    }
+}
+
