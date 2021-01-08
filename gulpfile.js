@@ -234,6 +234,7 @@ function watchFiles() {
     gulp.watch([path.watch.js], jsWatch);
     gulp.watch([path.watch.img], img);
     gulp.watch([path.watch.fonts], fonts);
+    gulp.watch([path.watch.libs], libs);
 }
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, img, libs, fonts));
