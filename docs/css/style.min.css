@@ -10,7 +10,8 @@ body {
   color: #fff;
   font-family: 'Roboto-Regular';
   font-weight: 400;
-  margin: 0; }
+  margin: 0;
+  user-select: none; }
 
 .container {
   max-width: 1230px;
@@ -88,13 +89,13 @@ body {
 .nav__logo {
   position: relative;
   font-size: 30px;
-  font-family: 'Roboto-Light';
+  font-family: "Roboto-Light";
   font-weight: 300;
   color: #333333;
   text-decoration: none;
   text-transform: uppercase; }
   .nav__logo span {
-    font-family: 'Roboto-Medium';
+    font-family: "Roboto-Medium";
     font-weight: 500; }
   .nav__logo::before {
     position: absolute;
@@ -192,7 +193,7 @@ body {
     width: 100%;
     height: 2px;
     background: #333333;
-    transition: .3s ease-in-out; }
+    transition: width 0.3s ease-in-out, top 0.3s ease-in-out 0.3s, height 0.3s ease-in-out 0s; }
   .nav__burger::after {
     position: absolute;
     top: 100%;
@@ -201,7 +202,7 @@ body {
     width: 50%;
     height: 2px;
     background: #333333;
-    transition: .3s ease-in-out; }
+    transition: width 0.3s ease-in-out, top 0.3s ease-in-out 0.3s, height 0.3s ease-in-out 0s; }
   .nav__burger span::before {
     position: absolute;
     top: 33%;
@@ -210,21 +211,29 @@ body {
     width: 70%;
     height: 2px;
     background: #333333;
-    transition: width .3s ease-in-out, top .3s ease-in-out .3s, height .3s ease-in-out .3s; }
+    transition: width 0.3s ease-in-out, top 0.3s ease-in-out 0.3s, height 0.3s ease-in-out 0.3s; }
   .nav__burger span::after {
     position: absolute;
-    top: 63%;
+    top: 66%;
     right: 0;
     content: "";
     width: 100%;
     height: 2px;
     background: #333333;
-    transition: width .3s ease-in-out, top .3s ease-in-out .3s, height .3s ease-in-out .3s; }
-  .nav__burger:hover::after, .nav__burger:hover span::before {
+    transition: width 0.3s ease-in-out, top 0.3s ease-in-out 0.3s, height 0.3s ease-in-out 0.3s; }
+  .nav__burger:hover::after,
+  .nav__burger:hover span::before {
     width: 100%; }
-  .nav__burger:hover span::before, .nav__burger:hover span::after {
+  .nav__burger:hover span::before,
+  .nav__burger:hover span::after {
     height: 4px;
     top: 50%; }
+  .nav__burger:hover::before {
+    top: 12%;
+    height: 3px; }
+  .nav__burger:hover::after {
+    top: 90%;
+    height: 3px; }
 
 .header {
   position: relative;
@@ -242,28 +251,18 @@ body {
   .header::after {
     position: absolute;
     content: "";
-    bottom: -17px;
+    bottom: -40px;
     left: 0%;
     width: 100%;
     height: 80px;
-    background: url("../img/png/header-border-down.png") center no-repeat;
+    background: url("../img/png/header-border-down.png") top center no-repeat;
     z-index: 200; }
 
 .header__carousel {
   position: relative;
   width: 100%;
-  height: 100%; }
-
-.header .header__carousel-nav {
-  position: absolute;
-  bottom: 60px;
-  right: 0px;
-  display: flex;
-  justify-content: flex-end;
-  max-width: 1860px;
-  width: 100%;
-  padding: 0 30px;
-  z-index: 100; }
+  height: 100%;
+  z-index: 60; }
 
 .header__carousel-custom {
   width: 35px;
@@ -313,33 +312,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
   .header__carousel-img img {
     width: 100%;
-    height: 1100px;
+    height: 1150px;
     object-fit: cover; }
-
-.header__carousel-wrapper {
-  position: relative;
-  height: 1100px; }
-  .header__carousel-wrapper::before {
-    position: absolute;
-    top: 50%;
-    left: 40px;
-    content: "";
-    transform: translateY(-50%);
-    background-color: #bbbbbb;
-    width: 1px;
-    height: 70px; }
-  .header__carousel-wrapper::after {
-    position: absolute;
-    top: 50%;
-    right: 40px;
-    content: "";
-    transform: translateY(-50%);
-    background-color: #bbbbbb;
-    width: 1px;
-    height: 70px; }
 
 .header__carousel-col {
   padding-top: 390px;
@@ -371,16 +349,17 @@ body {
   letter-spacing: 3px; }
 
 .header__carousel-wrap-btn {
-  position: relative; }
+  position: relative;
+  z-index: 100; }
   .header__carousel-wrap-btn span {
     position: absolute;
     top: -5px;
     left: -5px;
     width: 160px;
     height: 50px;
-    background-image: -moz-linear-gradient(-93.95deg, #b3d597 0%, #4fc3d8 100%);
-    background-image: -webkit-linear-gradient(-93.95deg, #b3d597 0%, #4fc3d8 100%);
-    background-image: -ms-linear-gradient(-93.95deg, #b3d597 0%, #4fc3d8 100%);
+    background: -moz-linear-gradient(-93.95deg, #b3d597 0%, #4fc3d8 100%);
+    background: -webkit-linear-gradient(-93.95deg, #b3d597 0%, #4fc3d8 100%);
+    background: -ms-linear-gradient(-93.95deg, #b3d597 0%, #4fc3d8 100%);
     border-radius: 25px;
     z-index: 5; }
   .header__carousel-wrap-btn:hover .header__carousel-btn {
@@ -408,7 +387,7 @@ body {
 .header__carousel-social {
   position: absolute;
   top: 25%;
-  right: 27px;
+  right: 0px;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -424,8 +403,55 @@ body {
     border-radius: 50%;
     text-decoration: none;
     background-color: #ffffff;
-    transition: .5s linear; }
+    transition: 0.5s linear; }
   .header__carousel-social i {
     font-size: 15px;
     color: #bababa;
-    transition: .5s linear; }
+    transition: 0.5s linear; }
+
+.header__carousel-social a:hover {
+  background: #78b000;
+  border: 1px solid black; }
+  .header__carousel-social a:hover i {
+    color: #000; }
+
+.header__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50; }
+
+.header__content-wrap {
+  position: relative;
+  width: 100%;
+  height: 1100px; }
+  .header__content-wrap::before {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    content: "";
+    transform: translateY(-50%);
+    background-color: #bbbbbb;
+    width: 1px;
+    height: 70px; }
+  .header__content-wrap::after {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    content: "";
+    transform: translateY(-50%);
+    background-color: #bbbbbb;
+    width: 1px;
+    height: 70px; }
+
+.header__carousel-nav {
+  position: absolute;
+  bottom: 60px;
+  right: 0px;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1860px;
+  width: 100%;
+  z-index: 50; }

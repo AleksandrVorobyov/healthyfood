@@ -17,11 +17,11 @@
   &::after {
     position: absolute;
     content: "";
-    bottom: -17px;
+    bottom: -40px;
     left: 0%;
     width: 100%;
     height: 80px;
-    background: url("../img/png/header-border-down.png") center no-repeat;
+    background: url("../img/png/header-border-down.png") top center no-repeat;
     z-index: 200;
   }
 }
@@ -30,18 +30,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-}
-
-.header .header__carousel-nav {
-  position: absolute;
-  bottom: 60px;
-  right: 0px;
-  display: flex;
-  justify-content: flex-end;
-  max-width: 1860px;
-  width: 100%;
-  padding: 0 30px;
-  z-index: 100;
+  z-index: 60;
 }
 
 .header__carousel-custom {
@@ -103,38 +92,12 @@
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
   img {
     width: 100%;
-    height: 1100px;
+    height: 1150px;
     object-fit: cover;
-  }
-}
-
-.header__carousel-wrapper {
-  position: relative;
-  height: 1100px;
-
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 40px;
-    content: "";
-    transform: translateY(-50%);
-    background-color: rgb(187, 187, 187);
-    width: 1px;
-    height: 70px;
-  }
-
-  &::after {
-    position: absolute;
-    top: 50%;
-    right: 40px;
-    content: "";
-    transform: translateY(-50%);
-    background-color: rgb(187, 187, 187);
-    width: 1px;
-    height: 70px;
   }
 }
 
@@ -174,23 +137,24 @@
 
 .header__carousel-wrap-btn {
   position: relative;
+  z-index: 100;
   span {
     position: absolute;
     top: -5px;
     left: -5px;
     width: 160px;
     height: 50px;
-    background-image: -moz-linear-gradient(
+    background: -moz-linear-gradient(
       -93.95deg,
       rgb(179, 213, 151) 0%,
       rgb(79, 195, 216) 100%
     );
-    background-image: -webkit-linear-gradient(
+    background: -webkit-linear-gradient(
       -93.95deg,
       rgb(179, 213, 151) 0%,
       rgb(79, 195, 216) 100%
     );
-    background-image: -ms-linear-gradient(
+    background: -ms-linear-gradient(
       -93.95deg,
       rgb(179, 213, 151) 0%,
       rgb(79, 195, 216) 100%
@@ -229,7 +193,7 @@
 .header__carousel-social {
   position: absolute;
   top: 25%;
-  right: 27px;
+  right: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,12 +212,70 @@
     border-radius: 50%;
     text-decoration: none;
     background-color: #ffffff;
-    transition: .5s linear;
+    transition: 0.5s linear;
   }
 
   i {
     font-size: 15px;
     color: #bababa;
-    transition: .5s linear;
+    transition: 0.5s linear;
   }
 }
+
+.header__carousel-social a:hover {
+  background: rgb(120, 176, 0);
+  border: 1px solid rgb(0, 0, 0);
+
+  i {
+    color: #000;
+  }
+}
+
+.header__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+
+.header__content-wrap {
+  position: relative;
+  width: 100%;
+  height: 1100px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    content: "";
+    transform: translateY(-50%);
+    background-color: rgb(187, 187, 187);
+    width: 1px;
+    height: 70px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    content: "";
+    transform: translateY(-50%);
+    background-color: rgb(187, 187, 187);
+    width: 1px;
+    height: 70px;
+  }
+}
+
+.header__carousel-nav {
+  position: absolute;
+  bottom: 60px;
+  right: 0px;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1860px;
+  width: 100%;
+  z-index: 50;
+}
+
