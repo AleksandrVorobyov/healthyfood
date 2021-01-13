@@ -144,6 +144,11 @@
     left: -5px;
     width: 160px;
     height: 50px;
+    background: linear-gradient(
+      -93.95deg,
+      rgb(179, 213, 151) 0%,
+      rgb(79, 195, 216) 100%
+    );
     background: -moz-linear-gradient(
       -93.95deg,
       rgb(179, 213, 151) 0%,
@@ -223,11 +228,11 @@
 }
 
 .header__carousel-social a:hover {
-  background: rgb(120, 176, 0);
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid #78b000;
+  transform: scale(2);
 
   i {
-    color: #000;
+    color: #78b000;
   }
 }
 
@@ -279,3 +284,23 @@
   z-index: 50;
 }
 
+.header__carousel-dots {
+  position: absolute;
+  bottom: 60px;
+  left: calc(100% - 120px);
+  max-width: 1860px;
+  width: 100%;
+  z-index: 30;
+
+  span {
+    font-size: 13px;
+    font-family: "Roboto-Medium";
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+  }
+}
+
+#header-carousel-active-dots {
+  font-size: 25px;
+  color: rgb(120, 176, 0);
+}
