@@ -721,6 +721,10 @@ h1, h2, h3, h4, h5, h6, p {
     top: 0;
 }
 
+.shop__carousel.container-big.owl-carousel.owl-theme .owl-dots {
+    margin: 0;
+}
+
 .shop__carousel.container-big.owl-carousel.owl-theme .owl-dots .owl-dot {
     outline: none;
 }
@@ -744,6 +748,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .shop__carousel.container-big.owl-carousel.owl-theme .owl-dots * + * {
     margin-left: 2px !important;
+}
+
+.shop__carousel.owl-carousel.owl-theme .owl-stage-outer {
+    margin-bottom: 60px;
 }
 
 .shop__carousel-item {
@@ -1445,4 +1453,37 @@ h1, h2, h3, h4, h5, h6, p {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     height: 980px;
+}
+
+.shop-big__carousel.owl-carousel.owl-theme .owl-dots {
+    margin: 0;
+}
+
+.shop-big__carousel.owl-carousel.owl-theme .owl-dots .owl-dot {
+    outline: none;
+}
+
+.shop-big__carousel.owl-carousel.owl-theme .owl-dots .owl-dot span {
+    margin: 0;
+    width: 50px;
+    height: 8px;
+    background: #dfdede;
+    border-radius: 0;
+    transition: background .3s linear;
+}
+
+.shop-big__carousel.owl-carousel.owl-theme .owl-dots .owl-dot.active span {
+    background: linear-gradient(0deg, #92d2a7 0%, #5ac7cc 100%);
+}
+
+.shop-big__carousel.owl-carousel.owl-theme .owl-dots .owl-dot span:hover {
+    background: linear-gradient(0deg, #92d2a7 0%, #5ac7cc 100%);
+}
+
+.shop-big__carousel.owl-carousel.owl-theme .owl-dots * + * {
+    margin-left: 2px !important;
+}
+
+.shop-big__carousel.owl-carousel.owl-theme .owl-stage-outer {
+    margin-bottom: 60px;
 }
