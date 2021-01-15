@@ -15,6 +15,14 @@
 }
 
 @font-face {
+	font-family: 'Helvetica-Regular';
+	src: url('../fonts/helvetica/Helvetica-Regular.eot');
+	src: local('☺'), url('../fonts/helvetica/Helvetica-Regular.woff') format('woff'), url('../fonts/helvetica/Helvetica-Regular.ttf') format('truetype'), url('../fonts/helvetica/Helvetica-Regular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Roboto-Light';
 	src: url('../fonts/roboto/Roboto-Light.eot');
 	src: local('☺'), url('../fonts/roboto/Roboto-Light.woff') format('woff'), url('../fonts/roboto/Roboto-Light.ttf') format('truetype'), url('../fonts/roboto/Roboto-Light.svg') format('svg');

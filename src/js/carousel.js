@@ -63,3 +63,13 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $(".shop-big__carousel").owlCarousel({
+        items: 4,
+        dots: true,
+        nav: false,
+        margin: 30,
+        mouseDrag: true,
+        loop: false
+    });
+});

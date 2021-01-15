@@ -1,0 +1,142 @@
+.info {
+  padding-top: 200px;
+  padding-bottom: 65px;
+}
+
+.info-wrap {
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-row + .info-row {
+  margin-top: 120px;
+}
+
+.info-col {
+}
+
+.info-col-col {
+  display: flex;
+  flex-direction: row;
+}
+
+.info-col-row {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+}
+
+.info__card {
+  position: relative;
+  z-index: 50;
+
+  input {
+    position: absolute;
+    left: -9999px;
+  }
+
+  label {
+    width: 170px;
+    height: 300px;
+    padding: 10px 10px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-width: 1.667px;
+    border-color: #eeeeee;
+    border-style: solid;
+    border-radius: 9px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: border .4s linear, box-shadow .4s linear .2s;
+    overflow: hidden;
+  }
+
+  input:checked + label {
+    box-shadow: 0px 10px 15px #d8d8d7;
+    border-color: rgb(125, 189, 0);
+  }
+}
+
+.info__card + .info__card {
+  margin-left: 30px;
+}
+
+.info__card-img {
+  height: 150px;
+  margin-bottom: 40px;
+}
+
+.info__card-title {
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: rgb(82, 82, 82);
+  text-align: center;
+  font-family: "Roboto-Light";
+  font-weight: 300;
+
+  span {
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1px;
+    background-color: #eeeeee;
+    width: 40px;
+    height: 2px;
+  }
+}
+
+.info__card-text {
+  font-size: 13px;
+  font-family: "Helvetica-Regular";
+  font-weight: 400;
+  line-height: 1;
+  color: rgb(127, 185, 0);
+  text-align: center;
+}
+
+.info__text {
+}
+
+.info__text-subtitle {
+  font-size: 12px;
+  line-height: 1;
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: rgb(82, 82, 82);
+}
+
+.info__text-title {
+  font-size: 35px;
+  font-weight: 400;
+  font-family: "MyriadPro-Regular";
+  color: rgb(82, 82, 82);
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.info__text-desc {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "MyriadPro-Regular";
+  color: rgb(82, 82, 82);
+  line-height: 1.8;
+
+  span {
+    font-weight: 700;
+  }
+}

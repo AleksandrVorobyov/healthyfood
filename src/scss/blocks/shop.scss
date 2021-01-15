@@ -79,6 +79,7 @@
 }
 
 .shop__carousel.container-big.owl-carousel.owl-theme .owl-dots  {
+  margin: 0;
 
   .owl-dot {
     outline: none;
@@ -106,6 +107,10 @@
   }
 }
 
+.shop__carousel.owl-carousel.owl-theme .owl-stage-outer {
+  margin-bottom: 60px;
+}
+
 .shop__carousel-item {
   position: relative;
   display: flex;
@@ -120,6 +125,7 @@
   padding-bottom: 45px;
   text-decoration: none;
   transition: box-shadow 0.4s linear, border .4s linear;
+  overflow: hidden;
 
   &::before {
     position: absolute;

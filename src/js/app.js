@@ -6,3 +6,4 @@ heartBtn.forEach( function(item) {
         this.classList.toggle('btn-heart-active');
     });
 });
+

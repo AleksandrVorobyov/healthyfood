@@ -1,0 +1,180 @@
+.about-me {
+  position: relative;
+  background: #f7f6f2;
+  height: 1080px;
+  padding-top: 125px;
+  z-index: 50;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 100px;
+    left: 0;
+    width: 160px;
+    height: 160px;
+    background: url("../img/about-me/bg/03.png") no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    width: 140px;
+    height: 190px;
+    transform: translateY(-50%);
+    background: url("../img/about-me/bg/02.png") no-repeat;
+  }
+}
+
+.about-me-wrap {
+}
+
+.about-me__text {
+}
+
+.about-me__text-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: rgb(82, 82, 82);
+  text-align: center;
+  font-family: "Roboto-Light";
+  font-weight: 300;
+
+  span {
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+  }
+}
+
+.about-me__text-subtitle {
+  position: relative;
+  margin: 0;
+  margin-bottom: 45px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  color: rgb(82, 82, 82);
+  text-align: center;
+}
+
+.about-me__text-desc {
+  margin: 0;
+  margin-bottom: 70px;
+  font-size: 16px;
+  color: rgb(82, 82, 82);
+  text-align: center;
+  font-family: "Helvetica-Regular";
+  font-weight: 400;
+}
+
+.about-me__cards {
+  display: flex;
+  justify-content: space-between;
+  height: 380px;
+}
+
+.about-me__card {
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:first-child,
+  &:last-child {
+    align-self: flex-end;
+  }
+}
+
+.about-me__card-img {
+  margin-bottom: 30px;
+}
+
+.about-me__card-title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: rgb(82, 82, 82);
+  text-align: center;
+  font-family: "Roboto-Light";
+  font-weight: 300;
+
+  span {
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+  }
+}
+
+.about-me__card-subtitle {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: rgb(82, 82, 82);
+  text-align: center;
+  font-family: "Helvetica-Regular";
+  font-weight: 400;
+}
+
+.about-me__card-link {
+  position: relative;
+  padding: 13px 30px;
+  font-size: 12px;
+  color: rgb(186, 195, 195);
+  text-align: center;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 17px;
+  background-color: rgb(255, 255, 255);
+  z-index: 5;
+  overflow: hidden;
+  transition: color .5s linear .5s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%);
+    background: $green;
+    border-radius: 50%;
+    z-index: -1;
+    transition: right 0.5s linear, transform 0.3s ease-in-out 0.5s;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -10px;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%);
+    background: $green;
+    border-radius: 50%;
+    z-index: -1;
+    transition: left 0.5s linear, transform 0.3s ease-in-out 0.5s;
+  }
+
+  &:hover {
+    color: white;
+    &::before {
+      transform: scale(15);
+      right: 80%;
+    }
+    &::after {
+      transform: scale(15);
+      left: 80%;
+    }
+  }
+}
+
+.about-me__bg {
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
