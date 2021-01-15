@@ -1487,3 +1487,81 @@ h1, h2, h3, h4, h5, h6, p {
 .shop-big__carousel.owl-carousel.owl-theme .owl-stage-outer {
     margin-bottom: 60px;
 }
+
+.stock {
+    position: relative;
+    padding: 95px 0 120px;
+    background: #f7f6f2;
+    z-index: 50;
+}
+
+.stock__text {
+    position: relative;
+    padding: 35px 0 60px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    background: url("../img/stock/bg/tomato.png") center center no-repeat;
+}
+
+.stock__text::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    z-index: -5;
+}
+
+.stock__text::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 170px;
+    height: 2px;
+    background-color: #78b000;
+    z-index: -4;
+}
+
+.stock__text-col {
+    max-width: 400px;
+}
+
+.stock__text-subtitle {
+    font-size: 12px;
+    font-family: "Roboto-Medium";
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #525252;
+    text-align: right;
+}
+
+.stock__text-title {
+    font-size: 40px;
+    font-family: "Roboto-Light";
+    font-weight: 300;
+    color: #525252;
+    text-align: right;
+}
+
+.stock__text-title span {
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+}
+
+.stock__text-desc {
+    font-size: 14px;
+    font-family: "MyriadPro-Regular";
+    font-weight: 400;
+    color: #525252;
+    text-align: left;
+    line-height: 1.8;
+}
