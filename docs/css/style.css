@@ -1648,3 +1648,197 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center;
     line-height: 14px;
 }
+
+.stock__cards {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 130px;
+}
+
+.stock__card {
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    border-radius: 11px;
+    width: 570px;
+    height: 250px;
+}
+
+.stock__card-col-btn {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    border-right: 2px solid #f7f6f2;
+    min-width: 60px;
+    height: 100%;
+    margin-right: 40px;
+}
+
+.stock__card-btn {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline-color: #78b000;
+    font-size: 18px;
+    color: #dedede;
+}
+
+.stock__card-btn + .stock__card-btn {
+    border-top: 2px solid #f7f6f2;
+}
+
+.stock__card-col-text {
+    padding-top: 40px;
+}
+
+.stock__card-text-subtitle {
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-family: "Roboto-Medium";
+    font-weight: 500;
+    color: #a0a0a0;
+    letter-spacing: 2.5px;
+    text-align: left;
+}
+
+.stock__card-text-title {
+    margin-bottom: 25px;
+    font-size: 30px;
+    color: #525252;
+    font-family: "Roboto-Light";
+    font-weight: 300;
+    text-align: left;
+}
+
+.stock__card-text-title span {
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+}
+
+.stock__card-text-desc {
+    margin-bottom: 30px;
+    font-family: "Helvetica-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    color: #525252;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.stock__card-text-price {
+    font-family: "Helvetica_bold";
+    font-weight: 700;
+    font-size: 14px;
+    color: #7fba00;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+}
+
+.stock__card-text-price span {
+    color: #dedede;
+    text-decoration: line-through;
+}
+
+.stock__card-col-product {
+    position: relative;
+    min-width: 205px;
+    height: 270px;
+    padding-top: 20px;
+}
+
+.stock__card-col-product a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.stock__card-product-teg {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.stock__card-product-teg span {
+    height: 25px;
+    width: 70px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 11px;
+    letter-spacing: 2.2px;
+    font-weight: bold;
+    font-family: "Helvetica_bold";
+    color: white;
+    text-transform: uppercase;
+    border-width: 1.25px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 12px;
+}
+
+.stock__card-product-img {
+    background: url("../img/png/shop-card-path.png") center center no-repeat, linear-gradient(180deg, #dbdad6 50%, #fff 50%);
+    height: 100%;
+    padding: 15px;
+}
+
+.stock__card-product-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.stock__pagination {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.stock__pagination-link {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    color: #bfbfbf;
+    font-weight: bold;
+    line-height: 12px;
+    font-family: "Roboto-Bold";
+}
+
+.stock__pagination-link + .stock__pagination-link {
+    margin-left: 8px;
+}
+
+.stock__pagination-link--active {
+    background-color: #90d3a6;
+    color: #fff;
+}

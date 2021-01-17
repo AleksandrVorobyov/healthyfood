@@ -34,6 +34,7 @@
 }
 
 .about-me__text-title {
+  position: relative;
   margin: 0;
   margin-bottom: 20px;
   font-size: 40px;
@@ -45,6 +46,17 @@
   span {
     font-family: "Roboto-Bold";
     font-weight: 700;
+  }
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    content: "";
+    transform: translateX(-50%);
+    background: url("../img/logo/leaf.png") top left no-repeat;
+    height: 30px;
+    width: 30px;
   }
 }
 
@@ -129,7 +141,7 @@
   background-color: rgb(255, 255, 255);
   z-index: 5;
   overflow: hidden;
-  transition: color .5s linear .5s;
+  transition: color 0.5s linear 0.5s;
 
   &::before {
     position: absolute;
