@@ -224,6 +224,8 @@
 }
 
 .stock__card-text-desc {
+  max-height: 50px;
+  overflow: hidden;
   margin-bottom: 30px;
   font-family: "Helvetica-Regular";
   font-weight: 400;
