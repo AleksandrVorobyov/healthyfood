@@ -1,0 +1,17 @@
+@keyframes banner-link {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-15px);
+    }
+}
+
+@keyframes subscribe-link {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(15px);
+    }
+}

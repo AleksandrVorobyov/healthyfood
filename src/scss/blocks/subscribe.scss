@@ -1,0 +1,101 @@
+.subscribe {
+  position: relative;
+  padding: 80px 0 125px;
+  background: #f7f6f2;
+  z-index: 60;
+  margin-bottom: 100px;
+
+
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: url('../img/subs/bg/limon.png') bottom left no-repeat;
+  }
+}
+
+.subscribe-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe__text {
+}
+
+.subscribe__text-subtitle {
+  font-size: 12px;
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  color: rgb(82, 82, 82);
+  letter-spacing: 2px;
+}
+
+.subscribe__text-title {
+  font-size: 35px;
+  color: rgb(82, 82, 82);
+  font-family: "Roboto-Light";
+  font-weight: 300;
+
+  span {
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+  }
+}
+
+.subscribe__form {
+  display: flex;
+
+  * + * {
+    margin-left: 20px;
+  }
+}
+
+#subscribe-email {
+  padding: 0 40px;
+  border-radius: 28px;
+  background-color: rgb(255, 255, 255);
+  width: 550px;
+  height: 55px;
+  border: none;
+  outline-color: $green;
+  font-size: 15px;
+  color: #cccccc;
+  font-family: "Roboto-Regular";
+  font-weight: 400;
+
+  &::placeholder {
+    font-size: 15px;
+    color: #cccccc;
+    font-family: "Roboto-Regular";
+    font-weight: 400;
+  }
+}
+
+.subscribe__form-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 55px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto-Regular";
+  font-weight: 400;
+  border-radius: 28px;
+  background-color: rgb(124, 192, 0);
+  border: none;
+  outline-color: $green;
+  cursor: pointer;
+
+  span {
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  &:hover span {
+    animation: subscribe-link 1s ease-in-out 0s infinite alternate;
+  }
+}

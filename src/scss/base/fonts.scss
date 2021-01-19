@@ -53,3 +53,11 @@
 	font-weight: 700;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'GreatVibes-Regular';
+	src: url('../fonts/greatvibes/GreatVibes-Regular.eot');
+	src: local('☺'), url('../fonts/greatvibes/GreatVibes-Regular.woff') format('woff'), url('../fonts/greatvibes/GreatVibes-Regular.ttf') format('truetype'), url('../fonts/greatvibes/GreatVibes-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

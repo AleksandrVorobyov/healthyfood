@@ -5,7 +5,7 @@ $(document).ready(function(){
         dotsData: true,
         nav: false,
         margin: 10,
-        mouseDrag: false
+        mouseDrag: false,
     });
     var headerowl = $('.header__carousel');
     headerowl.owlCarousel();
@@ -72,4 +72,87 @@ $(document).ready(function(){
         mouseDrag: true,
         loop: false
     });
+});
+
+$(document).ready(function(){
+    $(".promo__carousel--arrivals").owlCarousel({
+        items: 1,
+        dots: false,
+        nav: false,
+        margin: 30,
+        mouseDrag: true,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 9000,
+        smartSpeed: 800,
+        autoplayHoverPause: true
+    });
+    var promoOwlArrivals = $('.promo__carousel--arrivals');
+    promoOwlArrivals.owlCarousel();
+    // Go to the next item
+      $('.customNextBtn--arrivals').click(function() {
+        promoOwlArrivals.trigger('next.owl.carousel');
+      })
+      // Go to the previous item
+      $('.customPrevBtn--arrivals').click(function() {
+          // With optional speed parameter
+          // Parameters has to be in square bracket '[]'
+          promoOwlArrivals.trigger('prev.owl.carousel', [300]);
+      });
+});
+
+$(document).ready(function(){
+    $(".promo__carousel--popular").owlCarousel({
+        items: 1,
+        dots: false,
+        nav: false,
+        margin: 30,
+        mouseDrag: true,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        smartSpeed: 800,
+        autoplayHoverPause: true
+    });
+
+    var promoOwlPopular = $('.promo__carousel--popular');
+    promoOwlPopular.owlCarousel();
+    // Go to the next item
+      $('.customNextBtn--popular').click(function() {
+        promoOwlPopular.trigger('next.owl.carousel');
+      })
+      // Go to the previous item
+      $('.customPrevBtn--popular').click(function() {
+          // With optional speed parameter
+          // Parameters has to be in square bracket '[]'
+          promoOwlPopular.trigger('prev.owl.carousel', [300]);
+      });
+});
+
+$(document).ready(function(){
+    $(".promo__carousel--random").owlCarousel({
+        items: 1,
+        dots: false,
+        nav: false,
+        margin: 30,
+        mouseDrag: true,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 11000,
+        smartSpeed: 800,
+        autoplayHoverPause: true
+    });
+
+    var promoOwlRandom = $('.promo__carousel--random');
+    promoOwlRandom.owlCarousel();
+    // Go to the next item
+      $('.customNextBtn--random').click(function() {
+        promoOwlRandom.trigger('next.owl.carousel');
+      })
+      // Go to the previous item
+      $('.customPrevBtn--random').click(function() {
+          // With optional speed parameter
+          // Parameters has to be in square bracket '[]'
+          promoOwlRandom.trigger('prev.owl.carousel', [300]);
+      });
 });
