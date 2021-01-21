@@ -46,18 +46,18 @@
     align-items: center;
     flex-direction: column;
     border-width: 1.667px;
-    border-color: #eeeeee;
+    border-color: $borderLabelGrey;
     border-style: solid;
     border-radius: 9px;
-    background-color: rgb(255, 255, 255);
+    background-color: $sectionBgWhite;
     cursor: pointer;
-    transition: border .4s linear, box-shadow .4s linear .2s;
+    transition: border 0.4s linear, box-shadow 0.4s linear 0.2s;
     overflow: hidden;
   }
 
   input:checked + label {
-    box-shadow: 0px 10px 15px #d8d8d7;
-    border-color: rgb(125, 189, 0);
+    box-shadow: 0px 10px 15px $boxshadowGrey;
+    border-color: $borderColorGreenLight;
   }
 }
 
@@ -74,15 +74,8 @@
   position: relative;
   margin-bottom: 15px;
   font-size: 18px;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   text-align: center;
-  font-family: "Roboto-Light";
-  font-weight: 300;
-
-  span {
-    font-family: "Roboto-Bold";
-    font-weight: 700;
-  }
 
   &::before {
     position: absolute;
@@ -91,7 +84,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 1px;
-    background-color: #eeeeee;
+    background-color: $borderLabelGrey;
     width: 40px;
     height: 2px;
   }
@@ -99,10 +92,10 @@
 
 .info__card-text {
   font-size: 13px;
-  font-family: "Helvetica-Regular";
+  font-family: $helveticaRegular;
   font-weight: 400;
   line-height: 1;
-  color: rgb(127, 185, 0);
+  color: $fontGreenLight;
   text-align: center;
 }
 
@@ -110,19 +103,22 @@
 }
 
 .info__text-subtitle {
+  margin-bottom: 20px;
   font-size: 12px;
   line-height: 1;
-  font-family: "Roboto-Medium";
+  font-family: $robotoMedium;
   font-weight: 500;
   letter-spacing: 2px;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
 }
 
 .info__text-title {
+  display: inline-block;
+  margin-bottom: 15px;
   font-size: 35px;
   font-weight: 400;
   font-family: "MyriadPro-Regular";
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
 
   span {
     font-weight: 700;
@@ -132,8 +128,8 @@
 .info__text-desc {
   font-size: 16px;
   font-weight: 400;
-  font-family: "MyriadPro-Regular";
-  color: rgb(82, 82, 82);
+  font-family: $robotoRegular;
+  color: $fontColorDark;
   line-height: 1.8;
 
   span {

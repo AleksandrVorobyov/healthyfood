@@ -15,13 +15,13 @@
   }
 
   .header__carousel-custom {
-    border: 1px solid #eeeeee;
+    border: 1px solid $borderLabelGrey;
   }
 }
 
 .news__carousel {
   margin-bottom: 30px;
-  border-bottom: 1px solid rgb(238, 238, 238);
+  border-bottom: 1px solid $borderLabelGrey;
   z-index: 60;
   transform: translateY(-55px);
 }
@@ -31,7 +31,7 @@
   justify-content: space-between;
   padding: 80px 60px 80px 90px;
   max-width: 570px;
-  background: #fff;
+  background: $bgWhite;
   border-radius: 13px 13px 0 0;
 
   * + * {
@@ -43,7 +43,7 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 8px solid #90d3a6;
+  border: 8px solid $borderAvatar;
 }
 
 .news__carousel-text {
@@ -53,7 +53,7 @@
 .news__carousel-message {
   margin-bottom: 45px;
   font-size: 17px;
-  color: rgb(170, 170, 170);
+  color: $fontMessage;
   font-style: italic;
   line-height: 1.5;
   text-align: left;
@@ -63,14 +63,14 @@
 .news__carousel-user {
   margin: 0;
   font-size: 13px;
-  font-family: "Roboto-Bold";
+  font-family: $robotoBold;
   font-weight: 700;
-  color: #333333;
+  color: $fontColorLink;
   line-height: 1.3;
   text-align: left;
 
   i {
-    color: #b8ca00;
+    color: $fontUser;
     margin-right: 5px;
   }
 }
@@ -85,25 +85,18 @@
 .news__blog-subtitle {
   margin-bottom: 10px;
   font-size: 12px;
-  font-family: "Roboto-Regular";
+  font-family: $robotoRegular;
   font-weight: 400;
   letter-spacing: 2px;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   text-align: center;
 }
 
 .news__blog-title {
   margin-bottom: 60px;
   font-size: 35px;
-  font-family: "Roboto-Light";
-  font-weight: 300;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   text-align: center;
-
-  span {
-    font-family: "Roboto-Bold";
-    font-weight: 700;
-  }
 }
 
 .news__blog-article-row {
@@ -115,7 +108,7 @@
   margin-right: 50px;
   width: 240px;
   height: 220px;
-  border: 1px solid #efefef;
+  border: 1px solid $borderArticle;
   border-radius: 15px;
 
   img {
@@ -138,24 +131,17 @@
   display: block;
   margin-bottom: 15px;
   font-size: 10px;
-  font-family: "Roboto-Medium";
+  font-family: $robotoMedium;
   font-weight: 500;
-  color: rgb(159, 159, 159);
+  color: $fontNewsInfo;
 }
 
 .news__blog-article-info-title {
   position: relative;
   margin-bottom: 50px;
   font-size: 22px;
-  font-family: "Roboto-Light";
-  font-weight: 300;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   line-height: 1.5;
-
-  span {
-    font-family: "Roboto-Bold";
-    font-weight: 700;
-  }
 
   &::before {
     position: absolute;
@@ -164,7 +150,7 @@
     left: 0;
     width: 30px;
     height: 2px;
-    background-color: #efefef;
+    background-color: $borderArticle;
   }
 }
 
@@ -173,10 +159,10 @@
   margin-bottom: 30px;
   height: 40px;
   font-size: 14px;
-  font-family: "Helvetica-Regular";
+  font-family: $helveticaRegular;
   font-weight: 400;
   line-height: 1.5;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   overflow: hidden;
 }
 
@@ -184,9 +170,9 @@
   display: inline-flex;
   align-items: center;
   font-size: 13px;
-  font-family: "Helvetica-Regular";
+  font-family: $helveticaRegular;
   font-weight: 400;
-  color: rgb(153, 153, 153);
+  color: $fontColorSilver;
   transition: color .3s linear;
 
   span {
@@ -195,6 +181,6 @@
   }
 
   &:hover {
-      color: $green;
+      color: $fontGreen;
   }
 }

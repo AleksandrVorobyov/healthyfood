@@ -9,38 +9,30 @@ $(document).ready(function(){
     });
     var headerowl = $('.header__carousel');
     headerowl.owlCarousel();
-    // Go to the next item
       $('.customNextBtn').click(function() {
           headerowl.trigger('next.owl.carousel');
       })
-      // Go to the previous item
       $('.customPrevBtn').click(function() {
-          // With optional speed parameter
-          // Parameters has to be in square bracket '[]'
           headerowl.trigger('prev.owl.carousel', [300]);
       })
 });
-
-const btnHeaderNext = document.querySelector('#customNextBtn');
-const btnHeaderPrev = document.querySelector('#customPrevBtn');
-let dotsHeader = document.querySelector('#header-carousel-dots');
-let dotsHeaderActive = document.querySelector('#header-carousel-active-dots');
-
 
 function HeaderCarousel () {
     const btnHeaderNext = document.querySelector('#customNextBtn');
     const btnHeaderPrev = document.querySelector('#customPrevBtn');
     let dotsHeader = document.querySelector('#header-carousel-dots');
     let dotsHeaderNumber = document.querySelector('#header-carousel-active-dots');
+    let dotsHeaderInput = document.querySelector('#header-carousel-active-input');
     let slideHeaderAll = document.querySelectorAll('.header__carousel-item');
-    let dotsHeaderNumberFiel = parseFloat(dotsHeaderNumber.value, 10);
+    let dotsHeaderNumberFiel = parseFloat(dotsHeaderInput.value, 10);
 
     dotsHeader.innerHTML = `/${slideHeaderAll.length}`;
 
     btnHeaderPrev.addEventListener('click', function() {
         if (dotsHeaderNumberFiel > 1) {
             dotsHeaderNumberFiel--;
-            dotsHeaderNumber.value = dotsHeaderNumberFiel;
+            dotsHeaderInput.value = dotsHeaderNumberFiel;
+            dotsHeaderNumber.innerHTML = dotsHeaderInput.value;
         } else {
           return 1;
         }
@@ -49,22 +41,13 @@ function HeaderCarousel () {
       btnHeaderNext.addEventListener('click', function() {
         if (dotsHeaderNumberFiel >= 1 && dotsHeaderNumberFiel < 5) {
             dotsHeaderNumberFiel++;
-            dotsHeaderNumber.value = dotsHeaderNumberFiel;
+            dotsHeaderInput.value = dotsHeaderNumberFiel;
+            dotsHeaderNumber.innerHTML = dotsHeaderInput.value;
         } else {
           return 1;
         }
       });
-
 }
-
-
-
-
-// btnHeaderNext.addEventListener('click', function() {
-//     let result = dotsHeaderActive.value = 1;
-//     dotsHeaderActive.innerHTML = parseInt(result + 2);
-//     console.log('dotsHeaderActive', dotsHeaderActive)
-// })
 
 HeaderCarousel();
 
@@ -105,14 +88,10 @@ $(document).ready(function(){
     });
     var promoOwlArrivals = $('.promo__carousel--arrivals');
     promoOwlArrivals.owlCarousel();
-    // Go to the next item
       $('.customNextBtn--arrivals').click(function() {
         promoOwlArrivals.trigger('next.owl.carousel');
       })
-      // Go to the previous item
       $('.customPrevBtn--arrivals').click(function() {
-          // With optional speed parameter
-          // Parameters has to be in square bracket '[]'
           promoOwlArrivals.trigger('prev.owl.carousel', [300]);
       });
 });
@@ -133,14 +112,10 @@ $(document).ready(function(){
 
     var promoOwlPopular = $('.promo__carousel--popular');
     promoOwlPopular.owlCarousel();
-    // Go to the next item
       $('.customNextBtn--popular').click(function() {
         promoOwlPopular.trigger('next.owl.carousel');
       })
-      // Go to the previous item
       $('.customPrevBtn--popular').click(function() {
-          // With optional speed parameter
-          // Parameters has to be in square bracket '[]'
           promoOwlPopular.trigger('prev.owl.carousel', [300]);
       });
 });
@@ -161,14 +136,10 @@ $(document).ready(function(){
 
     var promoOwlRandom = $('.promo__carousel--random');
     promoOwlRandom.owlCarousel();
-    // Go to the next item
       $('.customNextBtn--random').click(function() {
         promoOwlRandom.trigger('next.owl.carousel');
       })
-      // Go to the previous item
       $('.customPrevBtn--random').click(function() {
-          // With optional speed parameter
-          // Parameters has to be in square bracket '[]'
           promoOwlRandom.trigger('prev.owl.carousel', [300]);
       });
 });
@@ -185,14 +156,10 @@ $(document).ready(function(){
 
     var newsOwlCom = $('.news__carousel');
     newsOwlCom.owlCarousel();
-    // Go to the next item
       $('.customNextBtn--comment').click(function() {
         newsOwlCom.trigger('next.owl.carousel');
       })
-      // Go to the previous item
       $('.customPrevBtn--comment').click(function() {
-          // With optional speed parameter
-          // Parameters has to be in square bracket '[]'
           newsOwlCom.trigger('prev.owl.carousel', [300]);
       });
 });

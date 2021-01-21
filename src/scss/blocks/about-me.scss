@@ -1,6 +1,6 @@
 .about-me {
   position: relative;
-  background: #f7f6f2;
+  background: $footerBgSilver;
   height: 1080px;
   padding-top: 125px;
   z-index: 50;
@@ -38,15 +38,8 @@
   margin: 0;
   margin-bottom: 20px;
   font-size: 40px;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   text-align: center;
-  font-family: "Roboto-Light";
-  font-weight: 300;
-
-  span {
-    font-family: "Roboto-Bold";
-    font-weight: 700;
-  }
 
   &::before {
     position: absolute;
@@ -66,9 +59,9 @@
   margin-bottom: 45px;
   font-size: 12px;
   letter-spacing: 4px;
-  font-family: "Roboto-Bold";
+  font-family: $robotoBold;
   font-weight: 700;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   text-align: center;
 }
 
@@ -76,9 +69,9 @@
   margin: 0;
   margin-bottom: 70px;
   font-size: 16px;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   text-align: center;
-  font-family: "Helvetica-Regular";
+  font-family: $robotoRegular;
   font-weight: 400;
 }
 
@@ -108,24 +101,17 @@
   margin: 0;
   margin-bottom: 30px;
   font-size: 18px;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   text-align: center;
-  font-family: "Roboto-Light";
-  font-weight: 300;
-
-  span {
-    font-family: "Roboto-Bold";
-    font-weight: 700;
-  }
 }
 
 .about-me__card-subtitle {
   margin: 0;
   margin-bottom: 30px;
   font-size: 14px;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   text-align: center;
-  font-family: "Helvetica-Regular";
+  font-family: $helveticaRegular;
   font-weight: 400;
 }
 
@@ -133,12 +119,12 @@
   position: relative;
   padding: 13px 30px;
   font-size: 12px;
-  color: rgb(186, 195, 195);
+  color: $fontLinkAboutMe;
   text-align: center;
   line-height: 1;
   text-decoration: none;
   border-radius: 17px;
-  background-color: rgb(255, 255, 255);
+  background-color: $bgWhite;
   z-index: 5;
   overflow: hidden;
   transition: color 0.5s linear 0.5s;
@@ -151,7 +137,7 @@
     width: 10px;
     height: 10px;
     transform: translateY(-50%);
-    background: $green;
+    background: $bgBtnGreen;
     border-radius: 50%;
     z-index: -1;
     transition: right 0.5s linear, transform 0.3s ease-in-out 0.5s;
@@ -165,14 +151,14 @@
     width: 10px;
     height: 10px;
     transform: translateY(-50%);
-    background: $green;
+    background: $bgBtnGreen;
     border-radius: 50%;
     z-index: -1;
     transition: left 0.5s linear, transform 0.3s ease-in-out 0.5s;
   }
 
   &:hover {
-    color: white;
+    color: $fontWhite;
     &::before {
       transform: scale(15);
       right: 80%;

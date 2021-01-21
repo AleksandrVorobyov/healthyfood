@@ -16,10 +16,10 @@
 .shop-big__nav-subtitle {
   margin-bottom: 20px;
   font-size: 12px;
-  font-family: "Roboto-Medium";
+  font-family: $robotoMedium;
   font-weight: 500;
   letter-spacing: 2px;
-  color: rgb(82, 82, 82);
+  color: $fontColorDark;
   text-align: center;
 }
 
@@ -36,19 +36,12 @@
   display: inline-block;
   padding: 17px 45px;
   font-size: 40px;
-  font-family: "Roboto-Light";
-  font-weight: 300;
   color: rgb(82, 82, 82);
   line-height: 40px;
   text-align: center;
-  border: 1px solid #e1e1e1;
-  background-color: #fff;
+  border: 1px solid $borderColorGreyDark;
+  background-color: $bgWhite;
   border-radius: 35px;
-
-  span {
-    font-family: "Roboto-Bold";
-    font-weight: 700;
-  }
 
   &::before {
     position: absolute;
@@ -58,7 +51,7 @@
     transform: translateY(-50%);
     width: 100%;
     height: 1px;
-    background-color: #e1e1e1;
+    background-color: $borderColorGreyDark;
     z-index: -1;
   }
 
@@ -83,8 +76,8 @@
   }
 
   input:checked + label {
-    box-shadow: 0px 10px 15px #d8d8d7;
-    color: #fff;
+    box-shadow: 0px 10px 15px $boxshadowGrey;
+    color: $fontWhite;
     &::before {
       top: 0;
     }
@@ -99,13 +92,11 @@
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    font-family: "Roboto-Light";
     line-height: 14px;
-    font-weight: 300;
-    color: rgb(159, 158, 155);
+    color: $fontRadio;
     cursor: pointer;
-    border-width: 0.833px;
-    border-color: rgb(225, 225, 225);
+    border-width: 1px;
+    border-color: $borderColorSilver;
     border-style: solid;
     border-radius: 15px;
     overflow: hidden;
@@ -122,22 +113,17 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgb(120, 176, 0);
+      background-color: $bgBtnGreen;
       transition: top 0.3s ease-in;
       z-index: -1;
     }
 
     &:hover {
-      box-shadow: 0px 10px 15px #d8d8d7;
-      color: #fff;
+      box-shadow: 0px 10px 15px $boxshadowGrey;
+      color: $fontWhite;
       &::before {
         top: 0;
       }
-    }
-
-    span {
-      font-family: "Roboto-Bold";
-      font-weight: 700;
     }
   }
 }
@@ -161,7 +147,7 @@
     margin: 0;
     width: 50px;
     height: 8px;
-    background: #dfdede;
+    background: $bgItemGrey;
     border-radius: 0;
     transition: background .3s linear;
   }
