@@ -14,16 +14,42 @@
   display: flex;
   justify-content: space-between;
 
-  * + * {
-    max-width: 335px;
-  }
-
   .footer__info-col-social {
     max-width: 270px;
+
+    @media (max-width: 1230px) {
+      margin-top: 40px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 1230px) {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1230px) {
+  .footer-row__info-wrap .footer__info-col-social {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer-row__info-wrap .footer__info-col-social {
+    margin-top: 0px;
+    max-width: 335px;
+    width: 100%;
   }
 }
 
 .footer__info-col-logo {
+  max-width: 335px;
+  width: 100%;
+
   .logo {
     margin-bottom: 90px;
   }
@@ -67,6 +93,19 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.footer-row__info-wrap .footer__info-col-links:nth-child(3) {
+  @media (max-width: 1230px) {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer__info-col-links {
+    max-width: 335px;
+    width: 100%;
   }
 }
 
@@ -127,6 +166,10 @@
       transform: translateY(-50%);
       content: "";
       background: url("../img/png/arrow-left.png");
+
+      @media (max-width: 480px) {
+        left: -20px;
+      }
     }
 
     &:hover a {
@@ -134,9 +177,6 @@
       color: $fontGreen;
     }
   }
-}
-
-.footer__info-col-social {
 }
 
 .footer__info-social-gallery {
@@ -148,6 +188,10 @@
 
   a {
     margin-bottom: 10px;
+  }
+
+  @media (max-width: 680px) {
+    max-width: 270px;
   }
 }
 
@@ -203,6 +247,9 @@
   align-items: center;
   transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out,
     transform 0.4s ease-in-out, margin-top 0.4s ease-in-out;
+  @media (max-width: 680px) {
+    justify-content: center;
+  }
 }
 
 [data-footer-last] {
@@ -210,13 +257,18 @@
   transform: scale(0);
   margin-top: 0 !important;
   height: 0;
+  @media (max-width: 1230px) {
+    flex-wrap: wrap;
+    flex-direction: inherit;
+    
+  }
 }
 
 .footer__copy-last--active {
   opacity: 1;
   transform: scale(1);
   margin-top: 15px !important;
-  height: 273px;
+  min-height: 273px;
 }
 
 .footer__copy-row + .footer__copy-row {
@@ -233,6 +285,10 @@
 }
 
 .footer__copy-links {
+  @media (max-width: 680px) {
+    display: none;
+  }
+
   ul {
     display: flex;
     align-items: center;

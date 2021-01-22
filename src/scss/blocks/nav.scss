@@ -14,11 +14,26 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 620px) {
+    flex-direction: column-reverse;
+    height: 130px;
+  }
 }
 
 .nav-col {
   display: flex;
   align-items: center;
+
+  @media (max-width: 620px) {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+    .logo {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .logo {
@@ -37,6 +52,12 @@
     background: url("../img/logo/leaf.png") top left no-repeat;
     height: 30px;
     width: 30px;
+  }
+}
+
+.nav__menu {
+  @media (max-width: 1024px) {
+    display: none;
   }
 }
 
@@ -105,6 +126,10 @@
     font-family: $robotoMedium;
     font-weight: 500;
   }
+
+  @media (max-width: 620px) {
+    margin-left: 0px;
+  }
 }
 
 .nav__cart-link {
@@ -139,6 +164,10 @@
   outline: none;
   cursor: pointer;
   background: transparent;
+
+  @media (max-width: 620px) {
+    margin-left: 0px;
+  }
 
   &::before {
     position: absolute;
