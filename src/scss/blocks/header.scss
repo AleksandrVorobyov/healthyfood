@@ -62,6 +62,10 @@
   &:hover {
     background: $bgBtnGreen;
   }
+
+  i {
+    color: $fontSilver;
+  }
 }
 
 .header__carousel.owl-theme .owl-dots {
