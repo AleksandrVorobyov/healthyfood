@@ -53,23 +53,61 @@ HeaderCarousel();
 
 $(document).ready(function(){
     $(".shop__carousel").owlCarousel({
-        items: 6,
         dots: true,
         nav: false,
         margin: 30,
         mouseDrag: true,
-        loop: false
+        responsive: {
+            1860: {
+                items: 6,
+            },
+            1525: {
+                items: 5,
+            },
+            1220: {
+                items: 4,
+            },
+            915: {
+                items: 3,
+            },
+            610: {
+                items: 2,
+                center: false,
+                autoWidth: false,
+            },
+            0: {
+                items: 1,
+                center: true,
+                autoWidth: true,
+            },
+        }
     });
 });
 
 $(document).ready(function(){
     $(".shop-big__carousel").owlCarousel({
-        items: 4,
         dots: true,
         nav: false,
         margin: 30,
         mouseDrag: true,
-        loop: false
+        responsive: {
+            1220: {
+                items: 4,
+            },
+            915: {
+                items: 3,
+            },
+            610: {
+                items: 2,
+                center: false,
+                autoWidth: false,
+            },
+            0: {
+                items: 1,
+                center: true,
+                autoWidth: true,
+            },
+        }
     });
 });
 
@@ -146,12 +184,19 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $(".news__carousel").owlCarousel({
-        items: 2,
         dots: false,
         nav: false,
         margin: 30,
         mouseDrag: true,
-        loop: true
+        loop: true,
+        responsive: {
+            1230: {
+                items: 2,
+            },
+            0: {
+                items: 1,
+            },
+        }
     });
 
     var newsOwlCom = $('.news__carousel');

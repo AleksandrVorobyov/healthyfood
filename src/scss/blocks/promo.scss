@@ -96,10 +96,10 @@
   text-align: left;
 }
 
-.promo__banners {
-}
-
 .promo__carousel-row {
+  @media (max-width: 1230px) {
+    display: none;
+  }
 }
 
 .promo__carousel-col {
@@ -165,6 +165,7 @@
   color: $fontColorDark;
   text-align: left;
 }
+
 .promo__carousel-item-price {
   font-size: 14px;
   color: $fontStockPrice;
@@ -176,6 +177,11 @@
 .promo__banners {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1230px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .promo__banners-card {
@@ -184,6 +190,17 @@
   height: 300px;
   border-radius: 11px;
   padding: 60px 40px 35px;
+  z-index: 50;
+  overflow: hidden;
+
+  @media (max-width: 1230px) {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 680px) {
+    padding: 40px 10px 40px;
+  }
 }
 
 .promo__banners-card--olive::before {
@@ -194,6 +211,10 @@
   width: 300px;
   height: 300px;
   background: url("../img/promo/cards/olive.png") no-repeat;
+
+  @media (max-width: 680px) {
+    z-index: -1;
+  }
 }
 
 .promo__banners-card--olive::after {
@@ -204,6 +225,10 @@
   width: 120px;
   height: 5px;
   background: $bgWhite;
+
+  @media (max-width: 680px) {
+    content: none;
+  }
 }
 
 .promo__banners-card--peach::before {
@@ -214,6 +239,10 @@
   width: 340px;
   height: 300px;
   background: url("../img/promo/cards/peach.png") no-repeat;
+
+  @media (max-width: 680px) {
+    z-index: -1;
+  }
 }
 
 .promo__banners-card--peach::after {
@@ -224,6 +253,10 @@
   width: 120px;
   height: 5px;
   background: $bgWhite;
+
+  @media (max-width: 680px) {
+    content: none;
+  }
 }
 
 .promo__banners-card--olive {
@@ -240,6 +273,11 @@
   height: 100%;
   padding: 45px 30px;
   border: 5px solid $borderWhite;
+
+  @media (max-width: 680px) {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 11px;
+  }
 }
 
 .promo__banners-card--olive {
@@ -250,6 +288,10 @@
     font-family: "GreatVibes-Regular";
     text-align: left;
     line-height: 40px;
+
+    @media (max-width: 680px) {
+      text-align: center;
+    }
   }
 
   .promo__banners-card-title {
@@ -260,6 +302,10 @@
     font-size: 14px;
     color: $fontPromoCardTitle;
     text-align: left;
+
+    @media (max-width: 680px) {
+      display: none;
+    }
   }
 }
 
@@ -271,6 +317,10 @@
     font-family: "GreatVibes-Regular";
     text-align: left;
     line-height: 40px;
+
+    @media (max-width: 680px) {
+      text-align: center;
+    }
   }
 
   .promo__banners-card-title {
@@ -281,6 +331,10 @@
     font-size: 14px;
     color: $fontPromoCardPeachTitle;
     text-align: left;
+
+    @media (max-width: 680px) {
+      display: none;
+    }
   }
 }
 
@@ -289,6 +343,10 @@
   font-size: 35px;
   color: $fontColorDark;
   text-align: left;
+
+  @media (max-width: 680px) {
+    text-align: center;
+  }
 }
 
 .promo__banners-card-text-subtitle {
@@ -298,6 +356,10 @@
   color: $fontColorDark;
   letter-spacing: 2px;
   text-align: left;
+
+  @media (max-width: 680px) {
+    text-align: center;
+  }
 }
 
 .promo__banners-card-link {
@@ -318,6 +380,11 @@
   font-weight: bold;
   font-family: $helveticaBold;
 
+  @media (max-width: 680px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   span {
     font-size: 20px;
     line-height: 20px;
@@ -331,4 +398,3 @@
 .promo__banners-card-link--peach {
   background: $fontPromoCardPeach;
 }
-

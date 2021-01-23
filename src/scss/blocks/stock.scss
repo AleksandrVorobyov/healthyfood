@@ -24,6 +24,10 @@
     height: 250px;
     background: url("../img/stock/bg/02.png") bottom left/cover no-repeat;
     z-index: -5;
+
+    @media (max-width: 620px) {
+      content: none;
+    }
   }
 }
 
@@ -34,7 +38,7 @@
     left: 50%;
     transform: translateX(-50%);
     content: "";
-    background: url('../img/png/header-border-down.png') top center no-repeat;
+    background: url("../img/png/header-border-down.png") top center no-repeat;
     width: 100%;
     height: 80px;
   }
@@ -47,7 +51,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: url("../img/stock/bg/tomato.png") center center no-repeat;
+  background: url("../img/stock/bg/tomato.png") top center no-repeat;
+
+  @media (max-width: 1230px) {
+    padding-top: 120px;
+    flex-direction: column;
+  }
 
   &::before {
     position: absolute;
@@ -75,6 +84,10 @@
 
 .stock__text-col {
   max-width: 400px;
+
+  @media (max-width: 1230px) {
+    margin-top: 30px;
+  }
 }
 
 .stock__text-subtitle {
@@ -134,6 +147,16 @@
     border-radius: 7px;
     background-color: $bgWhite;
     z-index: -1;
+
+    @media (max-width: 620px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -148,6 +171,11 @@
   font-family: $helveticaBold;
   text-align: center;
   line-height: 40px;
+
+  @media (max-width: 620px) {
+    font-size: 32px;
+    line-height: 32px;  
+  }
 }
 
 .stock__time-item-text {
@@ -163,6 +191,11 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 130px;
+
+  @media (max-width: 1230px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .stock__card {
@@ -171,6 +204,18 @@
   border-radius: 11px;
   width: 570px;
   height: 250px;
+
+  @media (max-width: 620px) {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1230px) {
+  .stock__card + .stock__card {
+    margin-top: 80px;
+  }
 }
 
 .stock__card-col-btn {
@@ -181,6 +226,10 @@
   min-width: 60px;
   height: 100%;
   margin-right: 40px;
+
+  @media (max-width: 620px) {
+    margin-right: 0;
+  }
 }
 
 .stock__card-btn {
@@ -192,6 +241,10 @@
   outline-color: $outlineGreen;
   font-size: 18px;
   color: $bgIcon;
+
+  @media (max-width: 620px) {
+    display: none;
+  }
 }
 
 .stock__card-btn + .stock__card-btn {
@@ -200,6 +253,13 @@
 
 .stock__card-col-text {
   padding-top: 40px;
+
+  @media (max-width: 620px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px 0;
+  }
 }
 
 .stock__card-text-subtitle {
@@ -258,6 +318,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  @media (max-width: 620px) {
+    height: 390px;
   }
 }
 

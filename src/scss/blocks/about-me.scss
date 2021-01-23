@@ -1,7 +1,7 @@
 .about-me {
   position: relative;
   background: $footerBgSilver;
-  height: 1080px;
+  min-height: 1080px;
   padding-top: 125px;
   z-index: 50;
 
@@ -24,6 +24,18 @@
     height: 190px;
     transform: translateY(-50%);
     background: url("../img/about-me/bg/02.png") no-repeat;
+  }
+}
+
+@media (max-width: 1230px) {
+  .about-me::after {
+    top: 70%;
+  }
+}
+
+@media (max-width: 680px) {
+  .about-me::after {
+    top: 63%;
   }
 }
 
@@ -79,6 +91,15 @@
   display: flex;
   justify-content: space-between;
   height: 380px;
+
+  @media (max-width: 1230px) {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+  }
 }
 
 .about-me__card {
@@ -90,6 +111,19 @@
   &:first-child,
   &:last-child {
     align-self: flex-end;
+  }
+
+  @media (max-width: 1230px) {
+    margin-bottom: 60px;
+
+    &:first-child,
+    &:last-child {
+      align-self: center;
+    }
+  }
+
+  @media (max-width: 680px) {
+    align-self: center;
   }
 }
 
@@ -175,4 +209,8 @@
   bottom: -150px;
   left: 50%;
   transform: translate(-50%, 0);
+
+  @media (max-width: 1230px) {
+    display: none;
+  }
 }

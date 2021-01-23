@@ -11,7 +11,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: url("../img/png/organic.png") center center no-repeat;
+  background: url("../img/png/organic.png") top center no-repeat;
+
+  @media (max-width: 1230px) {
+    flex-direction: column;
+    padding-top: 250px;
+    height: auto;
+
+    .shop__nav-col + .shop__nav-col {
+      margin-top: 30px;
+    }
+  }
 }
 
 .shop__nav-col {
@@ -27,6 +37,18 @@
     color: $fontWhite;
     &::before {
       top: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+
+    label {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -71,7 +93,7 @@
   }
 }
 
-.shop__carousel.container-big.owl-carousel.owl-theme .owl-dots {
+.shop__carousel.container-big__shop.owl-carousel.owl-theme .owl-dots {
   margin: 0;
 
   .owl-dot {

@@ -39,6 +39,34 @@ body {
   }
 }
 
+.container-big__shop {
+  max-width: 1860px;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @media (max-width: 1860px) {
+    max-width: 1525px;
+  }
+
+  @media (max-width: 1525px) {
+    max-width: 1220px;
+  }
+
+  @media (max-width: 1220px) {
+    max-width: 915px;
+  }
+
+  @media (max-width: 915px) {
+    max-width: 610px;
+  }
+
+  @media (max-width: 610px) {
+    max-width: 305px;
+    padding: 0 10px;
+  }
+}
+
 h1,
 h2,
 h3,

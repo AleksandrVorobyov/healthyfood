@@ -70,6 +70,16 @@
 .shop-big__nav-wrap {
   display: flex;
 
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 300px;
+
+    label {
+      margin-bottom: 30px;
+    }
+  }
+
   input {
     position: absolute;
     left: -9999px;
@@ -129,14 +139,14 @@
 }
 
 .shop-big__carousel {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 980px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 980px;
 }
 
-.shop-big__carousel.owl-carousel.owl-theme .owl-dots  {
+.shop-big__carousel.owl-carousel.owl-theme .owl-dots {
   margin: 0;
 
   .owl-dot {
@@ -149,15 +159,23 @@
     height: 8px;
     background: $bgItemGrey;
     border-radius: 0;
-    transition: background .3s linear;
+    transition: background 0.3s linear;
   }
 
   .owl-dot.active span {
-    background: linear-gradient( 0deg, rgb(146,210,167) 0%, rgb(90,199,204) 100%);
+    background: linear-gradient(
+      0deg,
+      rgb(146, 210, 167) 0%,
+      rgb(90, 199, 204) 100%
+    );
   }
-  
+
   .owl-dot span:hover {
-    background: linear-gradient( 0deg, rgb(146,210,167) 0%, rgb(90,199,204) 100%);
+    background: linear-gradient(
+      0deg,
+      rgb(146, 210, 167) 0%,
+      rgb(90, 199, 204) 100%
+    );
   }
 
   * + * {
