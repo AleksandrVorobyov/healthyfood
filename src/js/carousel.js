@@ -88,16 +88,13 @@ $(document).ready(function(){
     $(".shop-big__carousel").owlCarousel({
         dots: true,
         nav: false,
-        margin: 30,
         mouseDrag: true,
         responsive: {
             1220: {
                 items: 4,
             },
-            915: {
-                items: 3,
-            },
             610: {
+                margin: 30,
                 items: 2,
                 center: false,
                 autoWidth: false,

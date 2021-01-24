@@ -174,7 +174,7 @@
 
   @media (max-width: 620px) {
     font-size: 32px;
-    line-height: 32px;  
+    line-height: 32px;
   }
 }
 
@@ -350,14 +350,17 @@
 }
 
 .stock__card-product-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: url("../img/png/shop-card-path.png") center center no-repeat,
     linear-gradient(180deg, #dbdad6 50%, #fff 50%);
   height: 100%;
   padding: 15px;
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 85%;
+    height: 85%;
     object-fit: contain;
   }
 }

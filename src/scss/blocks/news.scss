@@ -4,11 +4,14 @@
   z-index: 70;
 }
 
-.news-wrap {
+.news__carousel-wrap {
+  position: relative;
+  margin-bottom: 30px;
+
   .news__carousel-nav {
     display: flex;
     position: absolute;
-    top: 254px;
+    bottom: 43px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 70;
@@ -20,7 +23,6 @@
 }
 
 .news__carousel {
-  margin-bottom: 30px;
   border-bottom: 1px solid $borderLabelGrey;
   z-index: 60;
   transform: translateY(-55px);
@@ -118,10 +120,15 @@
 
 .news__blog-article-row {
   display: flex;
+  justify-content: space-between;
 
   @media (max-width: 1230px) {
     align-items: center;
     flex-direction: column;
+
+    .news__blog-article + .news__blog-article {
+      margin-top: 40px;
+    }
   }
 }
 
