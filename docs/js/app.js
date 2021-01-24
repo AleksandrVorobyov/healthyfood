@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const heartBtn = document.querySelectorAll('[data-heart]');\r\n\r\nheartBtn.forEach( function(item) {\r\n    item.addEventListener('click', function() {\r\n        this.classList.toggle('btn-heart-active');\r\n    });\r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("const heartBtn = document.querySelectorAll('[data-heart]');\r\n\r\nheartBtn.forEach( function(item) {\r\n    item.addEventListener('click', function() {\r\n        this.classList.toggle('btn-heart-active');\r\n    });\r\n});\r\n\r\nfunction getInfoCards() {\r\n    let infoCardInputAll = document.querySelectorAll('[data-input]');\r\n    infoCardInputAll.forEach(function (item) {\r\n        item.addEventListener('click', function() {\r\n            let infoCardTextAll = document.querySelectorAll('[data-text]');\r\n            infoCardTextAll.forEach(function(item) {\r\n                item.style.display='none';\r\n            })\r\n            let a = this.getAttribute('data-input');\r\n            let text = document.querySelector(`[data-text=${CSS.escape(a)}]`);\r\n            text.style.display='block';\r\n        });\r\n    });\r\n};\r\n\r\ngetInfoCards();\r\n\r\nfunction getInfoCardsSecond() {\r\n    let infoCardInputAll = document.querySelectorAll('[data-input-second]');\r\n    infoCardInputAll.forEach(function (item) {\r\n        item.addEventListener('click', function() {\r\n            let infoCardTextAll = document.querySelectorAll('[data-text-second]');\r\n            infoCardTextAll.forEach(function(item) {\r\n                item.style.display='none';\r\n            })\r\n            let a = this.getAttribute('data-input-second');\r\n            let text = document.querySelector(`[data-text-second=${CSS.escape(a)}]`);\r\n            text.style.display='block';\r\n        });\r\n    });\r\n};\r\n\r\ngetInfoCardsSecond();\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("$(document).ready(function(){\r\n    $(\".header__carousel\").owlCarousel(
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const btnFooterCopy = document.querySelector('[data-btn-copy]');\r\nconst footerCopyLast = document.querySelector('[data-footer-last]');\r\n\r\nbtnFooterCopy.addEventListener('click', function(item) {\r\n    this.classList.toggle('footer__btn-copy--active');\r\n    footerCopyLast.classList.toggle('footer__copy-last--active');\r\n})\r\n\r\nconst infoOrganicFruits = document.querySelector('#organic-fruits');\r\nconst infoFreshVegetables = document.querySelector('#fresh-vegetables');\r\nconst infoOrganicBreads = document.querySelector('#organic-breads');\r\nlet infoCardTextAll = document.querySelectorAll('[data-info]');\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/footer.js?");
+eval("const btnFooterCopy = document.querySelector('[data-btn-copy]');\r\nconst footerCopyLast = document.querySelector('[data-footer-last]');\r\n\r\nbtnFooterCopy.addEventListener('click', function(item) {\r\n    this.classList.toggle('footer__btn-copy--active');\r\n    footerCopyLast.classList.toggle('footer__copy-last--active');\r\n})\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/footer.js?");
 
 /***/ }),
 
