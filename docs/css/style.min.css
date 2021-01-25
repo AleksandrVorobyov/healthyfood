@@ -144,6 +144,12 @@ a {
   100% {
     transform: translateX(15px); } }
 
+@keyframes info-block {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .nav {
   position: absolute;
   top: 0;
@@ -1141,6 +1147,13 @@ a {
   line-height: 1;
   color: #7abf00;
   text-align: center; }
+
+.info__text {
+  display: none; }
+
+.info__text--active {
+  display: block;
+  animation: info-block 1.5s linear forwards; }
 
 .info__text-subtitle {
   margin-bottom: 20px;

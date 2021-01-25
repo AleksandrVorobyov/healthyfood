@@ -12,11 +12,11 @@ function getInfoCards() {
         item.addEventListener('click', function() {
             let infoCardTextAll = document.querySelectorAll('[data-text]');
             infoCardTextAll.forEach(function(item) {
-                item.style.display='none';
+                item.classList.remove('info__text--active');
             })
             let a = this.getAttribute('data-input');
             let text = document.querySelector(`[data-text=${CSS.escape(a)}]`);
-            text.style.display='block';
+            text.classList.add('info__text--active');
         });
     });
 };
@@ -29,11 +29,11 @@ function getInfoCardsSecond() {
         item.addEventListener('click', function() {
             let infoCardTextAll = document.querySelectorAll('[data-text-second]');
             infoCardTextAll.forEach(function(item) {
-                item.style.display='none';
+                item.classList.remove('info__text--active');
             })
             let a = this.getAttribute('data-input-second');
             let text = document.querySelector(`[data-text-second=${CSS.escape(a)}]`);
-            text.style.display='block';
+            text.classList.add('info__text--active');
         });
     });
 };

@@ -89,12 +89,12 @@ $(document).ready(function(){
         dots: true,
         nav: false,
         mouseDrag: true,
+        margin: 30,
         responsive: {
             1220: {
                 items: 4,
             },
             610: {
-                margin: 30,
                 items: 2,
                 center: false,
                 autoWidth: false,

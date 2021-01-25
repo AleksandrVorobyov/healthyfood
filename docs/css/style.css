@@ -1638,6 +1638,7 @@ a {
     font-weight: 500;
     letter-spacing: 2px;
     color: #525252;
+    text-transform: uppercase;
 }
 
 .info__text-title {

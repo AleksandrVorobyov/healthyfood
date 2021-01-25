@@ -135,6 +135,12 @@
 }
 
 .info__text {
+  display: none;
+}
+
+.info__text--active {
+  display: block;
+  animation: info-block 1.5s linear forwards;
 }
 
 .info__text-subtitle {
